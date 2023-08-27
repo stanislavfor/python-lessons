@@ -3,12 +3,12 @@
 
 #### Ссылки на сайты (дополнительные материалы):
 
-[Acmp](https://acmp.ru/)
-[E-olymp (из России с VPN)](www.e-olymp.com)
-[Codewars](https://www.codewars.com/)
-[Codeforce](https://codeforces.com/)
-[Kaggle (для аналитиков)](https://www.kaggle.com/)
-[Informatics](informatics.ru)
+- [Acmp](https://acmp.ru/)
+- [E-olymp (из России с VPN)](www.e-olymp.com)
+- [Codewars](https://www.codewars.com/)
+- [Codeforce](https://codeforces.com/)
+- [Kaggle (для аналитиков)](https://www.kaggle.com/)
+- [Informatics](informatics.ru)
 
 #### Ссылка на [установку](https://drive.google.com/file/d/1xESMgSsSq41Y1F4uDQASEEzY2MwMZ-wX/view) [PyCharm](https://www.jetbrains.com/pycharm/).
 
