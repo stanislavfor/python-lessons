@@ -5,3 +5,26 @@
 # Здесь каждое число – это масса соответствующего арбуза 
 # Input: 5 -> 5 1 6 5 9
 # Output: 1 9
+
+import random
+n = int(input("Введите количество арбузов: "))
+list = []
+
+# Ввод веса каждого арбуза с клавиатуры
+# i = 0
+# while i < n:
+#     temp = int(input(f"Введите вес {i+1} арбуза: "))
+#     list.append(temp)
+#     i +=1
+# 
+
+# Ввод случайный чисел для примера весовых арбузов
+for _ in range(n):
+    list.append(random.randint(1, 12))
+print("Вес арбузов =", list)
+
+print("Самый легкий и самый тяжелый арбуз:", end=' ')
+print(min(list), "и", max(list), "кило, соответственно.")  
+print("Input: ", n, "-> ", " ".join(map(str, list)))
+print(f'Output: {min(list)} {max(list)}') 
+print()
