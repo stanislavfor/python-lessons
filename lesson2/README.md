@@ -100,3 +100,8 @@ Sample Output 3:
 ```
 10 -> 1 2 4 8
 ```
+
+Ссылки на Домашнюю работу:
+- [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson2/hw1.py)
+- [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson2/hw2.py)
+- [Задача 3.](https://github.com/stanislavfor/python-lessons/blob/main/lesson2/hw3.py)
