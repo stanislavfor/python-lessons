@@ -3,13 +3,13 @@
 # 1 2 3 4 5
 # 3
 # -> 1
+
+
 import random
 
-n = int(input("Укажите N количество элементов в массиве : "))
-a = []
-for i in range(n):
-    a[i] = random.randint(1, 100)
-
+n = int(input("Укажите N количество элементов в массиве : "))   
+a = random.sample(range(1, 101), n)
+print(*a)
 count = 0
 x = int(input("Укажите число X : "))
 
@@ -17,4 +17,27 @@ for i in range(n):
     if a[i] == x:
         count += 1
 
-print("Количество повторений числа X в массиве ->", count)  
+print(f"Число X = {x} повторяется в количестве ->", count)  
+
+# # Дополнительное решение задачи:
+# # Требуется вычислить, сколько раз встречается некоторое число k в массиве list_1.
+# # Найдите количество и выведите его.
+# # Output: 1
+# list_1 = [1, 2, 3, 4, 5]
+# k = 3
+
+# count = 0
+# for i in list_1:
+#     if int(i) == k:
+#         count += 1
+
+# print(count)  
+
+# Другое решение этой задачи
+# list_1 = [1, 2, 3, 4, 5]
+# k = 3
+# count = 0
+# for i in range(len(list_1)):
+#     if list_1[i] == k:
+#         count += 1
+# print(count)

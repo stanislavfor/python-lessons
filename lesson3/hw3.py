@@ -20,3 +20,28 @@
 # ноутбук
 # Вывод:
 # 12
+
+def Scrabble(word):
+    for key in dict:
+        if word in key:            
+            return dict.get(key)
+ 
+dict = {
+    'AEIOULNSTR' : 1, 'DG' : 2, 'BCMP' : 3,
+    'FHVWY' : 4, 'K' : 5, 'JX' : 8, 'QZ' :10,
+    'АВЕИНОРСТ' : 1, 'ДКЛМПУ' : 2, 'БГЁЬЯ' : 3,
+    'ЙЫ' : 4, 'ЖЗХЦЧ' : 5, 'ШЭЮ' : 8, 'ФЩЪ' :10
+    }
+print(sum(map(Scrabble, input("Введите слово: ").upper())))
+
+# Отдельное решение:
+# k = 'ноутбук'
+# dict = {
+#     'AEIOULNSTRАВЕИНОРСТ' : 1, 'DGДКЛМПУ' : 2, 'BCMPБГЁЬЯ' : 3,
+#     'FHVWYЙЫ' : 4, 'KЖЗХЦЧ' : 5, 'JXШЭЮ' : 8, 'QZФЩЪ' :10
+#     }
+# def Scrabble(k):
+#     for key in dict:
+#         if k in key:            
+#             return dict.get(key)
+# print(sum(map(Scrabble, k.upper())))
