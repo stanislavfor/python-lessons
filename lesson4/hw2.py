@@ -4,28 +4,19 @@
 # 4 -> 1 2 3 4
 # 9
 
-from random import randint
-bilberry = list(randint(1, 5) for i in range(int(input("Введите количество кустов: "))))
-print(bilberry)
-a = int(input("Введите № куста: "))
-res = 0
+
+bilberry = list(range(1, (int(input("Введите количество кустов: "))+1)))
+print(" ->", end = ' ')
+print(*bilberry)
+a = int(input("Введите номер куста: "))
+berries = 0
 if a == 1:
-  res = bilberry[0] + bilberry[1] + bilberry[-1]
+  berries = bilberry[0] + bilberry[1] + bilberry[-1]
 elif a == len(bilberry):
-  res = bilberry[-2] + bilberry[-1] + bilberry[0]
+  berries = bilberry[-2] + bilberry[-1] + bilberry[0]
 else:
-  res = bilberry[a-1] + bilberry[a-2] + bilberry[a]
-print(res, "ягод")
+  berries = bilberry[a-1] + bilberry[a] + bilberry[a-2]
+print(berries)
+print("Максимальное число =", berries, "ягод с трёх соседних кустов")
 
 
-n=int(input("Введите количество  кустов: "))
-arr=list()
-for i in range(n):
-    x=int(input("Введите количество ягод: "))
-    arr.append(x)
-    arr_count=list()
-for i in range(len(arr)-1):
-    arr_count.append(arr[i-1]+arr[i]+arr[i+1])
-arr_count.append(arr[-2]+arr[-1]+arr[0])
-print(arr)
-print("Максимальное число ягод =", max(arr_count))  
