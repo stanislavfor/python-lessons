@@ -7,17 +7,17 @@
 
 n = int(input("Введите N кол-во элементов первого множества: "))
 m = int(input("Введите N кол-во элементов второго множества: "))
-array_x = []
+array_x = {}
 x = input("Введите элементы первого массива (через пробел): ")
-array_x = set(x.split())
+array_x = sorted(set(x.split()))
 
-array_y = []
+array_y = {}
 y = input("Введите элементы второго массива (через пробел): ")
-array_y = set(y.split())
+array_y = sorted(set(y.split()))
 
-intersection_set = array_x & array_y
-intersection_set = sorted(intersection_set)
-print(" ".join(intersection_set))
+intersection_set = list(set(array_x).intersection(set(array_y)))
+intersection_set = " ".join(intersection_set)
+print(intersection_set)
 
 
 # Дополнительное решение с рандомными массивами
