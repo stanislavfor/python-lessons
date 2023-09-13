@@ -2,20 +2,22 @@
 # Напишите программу для нахождения максимального числа ягод, которое может собрать за один заход собирающий модуль, находясь перед некоторым кустом заданной во входном файле грядки.
 
 # 4 -> 1 2 3 4
-# 9
+# 8
 
 
 bilberry = list(range(1, (int(input("Введите количество кустов: "))+1)))
 print(" ->", end = ' ')
 print(*bilberry)
-a = int(input("Введите номер куста: "))
+
 berries = 0
-if a == 1:
-  berries = bilberry[0] + bilberry[1] + bilberry[-1]
-elif a == len(bilberry):
-  berries = bilberry[-2] + bilberry[-1] + bilberry[0]
-else:
-  berries = bilberry[a-1] + bilberry[a] + bilberry[a-2]
+maximum = max(bilberry)
+for i in bilberry:
+  if maximum == bilberry[0]:
+    berries = bilberry[0] + bilberry[1] + bilberry[-1]
+  elif maximum == bilberry[len(bilberry)-1]:
+    berries = bilberry[-2] + bilberry[-1] + bilberry[0]
+  else:
+    berries = bilberry[i-1] + bilberry[i] + bilberry[i-2]
 print(berries)
 print("Максимальное число =", berries, "ягод с трёх соседних кустов")
 
