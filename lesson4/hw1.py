@@ -9,10 +9,9 @@ n = int(input("Введите N кол-во элементов первого м
 m = int(input("Введите N кол-во элементов второго множества: "))
 
 x = input("Введите элементы первого массива (через пробел): ")
-array_x = sorted(set(x.split()))
-
+array_x = x.split()
 y = input("Введите элементы второго массива (через пробел): ")
-array_y = sorted(set(y.split()))
+array_y = y.split()
 
 intersection_set = list(set(array_x).intersection(set(array_y)))
 intersection_set = " ".join(intersection_set)

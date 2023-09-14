@@ -2,3 +2,17 @@
 # A = 3; B = 5 -> 243 (3⁵)
 # A = 2; B = 3 -> 8
 
+a = int(input("Введите число A: "))
+b = int(input("Введите число B: "))
+def f(a, b):
+  if b == 0:
+    return 1
+  return a * f(a, b - 1)
+
+# def f(a, b):
+#   if b == 0:
+#     return 1
+#   return f(a, b - 1) * a
+print(f(a, b))
+print("A =", a, "; B =", b, ", число А в степени B: ->", f(a, b))
+
