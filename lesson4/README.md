@@ -87,6 +87,6 @@ print(n)
 
 
 
-Ссылки на Домашнюю работу:
+##### Ссылки на Домашнюю работу:
 - [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson4/hw1.py)
 - [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson4/hw2.py)

@@ -94,7 +94,7 @@ Output: 2 (-1 < 5, 2 < 3)
 
 ```
 
-Ссылки на Домашнюю работу:
+##### Ссылки на Домашнюю работу:
 - [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson3/hw1.py)
 - [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson3/hw2.py)
 - [Задача 3.](https://github.com/stanislavfor/python-lessons/blob/main/lesson3/hw3.py)

@@ -82,3 +82,9 @@ a, b, c = 3, 2, 1 -> no
 
 
 
+##### Ссылки на Домашнюю работу:
+- [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson1/hw1.py)
+- [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson1/hw2.py)
+- [Задача 3.](https://github.com/stanislavfor/python-lessons/blob/main/lesson1/hw3.py)
+- [Задача 4.](https://github.com/stanislavfor/python-lessons/blob/main/lesson1/hw4.py)
+

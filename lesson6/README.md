@@ -66,6 +66,6 @@
 Вывод: [1, 9, 13, 14, 19]
 ```
 
-Ссылки на Домашнюю работу:
+##### Ссылки на Домашнюю работу:
 - [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson6/hw1.py)
 - [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson6/hw2.py)

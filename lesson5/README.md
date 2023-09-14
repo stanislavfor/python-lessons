@@ -50,6 +50,6 @@ A = 2; B = 3 -> 8
 ```
 
 
-Ссылки на Домашнюю работу:
+##### Ссылки на Домашнюю работу:
 - [Задача 1.](https://github.com/stanislavfor/python-lessons/blob/main/lesson5/hw1.py)
 - [Задача 2.](https://github.com/stanislavfor/python-lessons/blob/main/lesson5/hw2.py)
