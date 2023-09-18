@@ -9,9 +9,17 @@
 # c = [a1 + (i - 1) * d for i in range(1, n + 1)]
 # print(*c)
 
-# Второй вариант решения
+# # Второй вариант решения
+# numbers = input("Первый элемент списка, шаг, количество элементов \n(введите через пробел): ")
+# numbers = list(map(int, numbers.split()))
+# # res_array = [numbers[0] + (i - 1) * numbers[1] for i in range(1, numbers[2] + 1)]
+# res_array = [numbers[0] + i * numbers[1] for i in range(numbers[2])]
+# print(*res_array)
+
+
+
+# Третий вариант решения
 numbers = input("Первый элемент списка, шаг, количество элементов \n(введите через пробел): ")
 numbers = list(map(int, numbers.split()))
-res_array = [numbers[0] + (i - 1) * numbers[1] for i in range(1, numbers[2] + 1)]
-print(*res_array)
+print(*list(range(numbers[0], numbers[0] + numbers[1] * numbers[2] , numbers[1])))
 # print()
