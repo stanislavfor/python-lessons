@@ -14,8 +14,7 @@ def poem():
     for letter in phrase:      
       if letter in vowels:
         s += 1
-    vowels_sum.append(s)  
-# return len(vowels_sum) == list.count(vowels_sum[0])    
+    vowels_sum.append(s)     
   if vowels_sum[1:] != vowels_sum[:-1]:
     print('vowels =', vowels_sum, "-> ", end = " ")
     return "Пам парам" 
