@@ -8,3 +8,34 @@
 # 4 8 12 16 20 24
 # 5 10 15 20 25 30
 # 6 12 18 24 30 36
+
+
+# Первый вариант
+def print_operation_table(operation, num_rows=6, num_columns=6):
+  for row in range(1, num_rows + 1):
+    for col in range(1, num_columns + 1):      
+      print(*[f"{operation(row, col):>3}"], end = "")
+    print("\n", end = "")
+print_operation_table(lambda x, y: x * y)
+
+
+# Второй вариант
+# def print_operation_table(operation, num_rows=6, num_columns=6):
+#   table = "" 
+#   for row in range(1, num_rows+1):        
+#     for col in range(1, num_columns+1):
+#       table += f"{operation(row, col)} "
+#     table += "\n"
+#   print(table)
+# print_operation_table(lambda x, y: x * y) 
+
+
+
+# Пример решения задачи:
+# def print_operation_table(operation, num_rows=6, num_columns=6):  
+#   table = [[operation(row, col) for col in range(1, num_columns + 1)] for row in range(1, num_rows + 1)]
+#   for row in table:
+#     print(*[f"{x:>3}" for x in row])
+# print_operation_table(lambda x, y: x * y)
+
+
