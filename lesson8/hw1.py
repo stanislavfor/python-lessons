@@ -1,5 +1,8 @@
 # Задача 1. Дополнить телефонный справочник возможностью изменения и удаления данных. Пользователь также может ввести имя или фамилию, и Вы должны реализовать функционал для изменения и удаления данных.
 
+import os
+# path = os.path.join('lesson8', 'book.txt')
+path = os.path.abspath('book.txt')
 
 def enter_second_name():
     return input("Введите фамилию абонента: ").title()
@@ -22,57 +25,66 @@ def enter_data():
   family = enter_family_name()  
   number = enter_phone_number()
   address = enter_address_number()
-  with open(r'book.txt', 'a', encoding='utf-8') as file:
-    file.write(f'- {surname} {name} {family},\n{number}, {address};\n\n')
+  with open(path, 'a', encoding='utf-8') as file:
+    file.write(f'- {surname} {name} {family}, {number}, {address};\n')
 
-def print_data():
-  print("Контакты ->")
-  with open(r'book.txt', 'r', encoding='utf-8') as file:
-    print(file.read())    
 
 def delete_data(): # Доработать
-  print('Выберете поисковые данные записи: \n'
-    '1. Фамилия,\n'
-    '2. Имя,\n'
+  print('Выберете поисковые данные записи: '
+    '1. Фамилия, '
+    '2. Имя, '
     '3. Отчество')  
   delete_line = input('и введите поисковые данные для удаления ВСЕЙ записи: ').title()  
-  with open(r'book.txt', 'w+', encoding='utf-8') as file:
-    data_lines = file.read().strip().split('\n\n')
-    print(f"Запись удалена ->")
-    for del_item in data_lines:
-      delete_item = del_item.replace('-', ' ').split()
+  with open(path, 'w+', encoding='utf-8') as file:
+    delete_data = file.read().strip().split('\n\n')    
+    for delete_item in delete_data:
+      delete_item = delete_item.replace(';', ' ').split()
       if delete_line in delete_item:
-        print(*delete_item, end="\n\n")                      
-        file.write(delete_item)
+        print("Запись удалена -> ")
+        print(delete_item, end="\n\n") 
+        for delete_line in delete_item:
+          #delete_item.remove(delete_line) 
+          delete_item.clear()
+          with open(path, "w", encoding="UTF-8") as file:
+            file.write("".join(delete_data))
         
 
 def search_line():
-  print('Выбертите вариант поиска: \n'
-    '1. Фамилия,\n'
-    '2. Имя,\n'
-    '3. Отчество,\n'
-    '4. Телефон,\n'
-    '5. Адрес')
-  # index = int(input('Введите вариант: ')) - 1
-  searched = input('и введите поисковые данные: ').title()
+  print('Выбертите вариант поиска: '
+    '1. Фамилия, '
+    '2. Имя, '
+    '3. Отчество, '
+    '4. Телефон, '
+    '5. Адрес, '
+    '6. Вся информация')
+  index = int(input('Введите вариант: ')) - 1
+  searched = input('Введите поисковые данные: ').title()
   with open(r'book.txt', 'r', encoding='utf-8') as file:
     data = file.read().strip( ).split('\n\n')    
-    print("Результат поиска ->")
+    print("Результат поиска: ")
     for item in data:
-      new_item = item.replace('-', ' ').split()   
-      # new_item = item.replace('\n', ' ').split()           
-      if searched in new_item:               
+      new_item = item.replace(';', ' ').split()   
+      # new_item = item.replace('\n', ' ').split()        
+      if searched in new_item and index == 5:              
         print(*new_item, end="\n\n")
+      if searched in new_item and index != 5:
+        print(*new_item[index], end="\n\n")
+        
+
+def print_data():
+  print("Контакты: ")
+  with open(path, 'r', encoding='utf-8') as file:
+    print(file.read())    
 
 
 def interface():
   cmd = 0
   while cmd != '5':
     print("Выберите действие: \n"
-      "1. Добавить контакт\n"
-      "2. Вывести все контакты\n"
-      "3. Поиск контакта\n"
-      "4. Удалить контакт\n"
+      "1. Добавить контакт, "
+      "2. Вывести все контакты, "
+      "3. Поиск контакта, "
+      "4. Удалить контакт,\n"
       "5. Выход")
     cmd = input("Введите действие: ")
     while cmd not in ('1', '2', '3', '4', '5'):
@@ -89,5 +101,6 @@ def interface():
           delete_data()
       case '5':
           print('Всего доброго! ')
+
 
 interface()
