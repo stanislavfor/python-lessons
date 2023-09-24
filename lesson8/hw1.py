@@ -38,8 +38,7 @@ def update_contact():
   with open(path, "r", encoding='utf-8') as file:
     for line in file:
       if surname.lower() in line.lower():
-        print(line.strip())
-        print(giveme(line.strip(), (1,1)))
+        print(line.strip())        
   new_surname = input("Введите новую фамилию: ")  
   new_name = input("Введите новое имя: ")
   new_middle_name = input("Введите новое отчество: ")
