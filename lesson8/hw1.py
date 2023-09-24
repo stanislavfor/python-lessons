@@ -31,9 +31,6 @@ def search_contacts():
         print(line.strip())
 
 
-def giveme(s, words=()):
-    li = s.split()    
-    return [li[item_1] for item_1 in words]  
 
 def update_contact():
   surname = input("Введите фамилию записи, которую нужно изменить: ")    
@@ -43,10 +40,7 @@ def update_contact():
       if surname.lower() in line.lower():
         print(line.strip())
         print(giveme(line.strip(), (1,1)))
-  new_surname = input("Введите новую фамилию: ")
-  if new_surname == ' ':
-    new_surname = line.surname
-    print(line.surname)
+  new_surname = input("Введите новую фамилию: ")  
   new_name = input("Введите новое имя: ")
   new_middle_name = input("Введите новое отчество: ")
   new_phone = input("Введите новый номер телефона: ")
