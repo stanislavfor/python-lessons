@@ -6,12 +6,14 @@
 
 
 #### Задача 1. Выполнить для файлов из лекции:
+Ресурс [colab.research.google.com](https://colab.research.google.com/)
 1. Прочесть с помощью pandas файл california_housing_test.csv, который находится в папке sample_data
 2. Посмотреть сколько в нем строк и столбцов.
 3. Определить какой тип данных имеют столбцы.
 
 
 #### Задача 2. Выполнить для файлов из лекции:
+Ресурс [colab.research.google.com](https://colab.research.google.com/)
 1. Проверить есть ли в файле пустые значения
 2. Показать median_house_value где median_income < 2
 3. Показать данные в первых 2 столбцах
@@ -19,11 +21,12 @@
 
 
 #### Задача 3.  Выполнить для файлов из лекции:
+Ресурс [colab.research.google.com](https://colab.research.google.com/)
 1. Определить какое максимальное и минимальное значение median_house_value
 2. Показать максимальное median_house_value, где median_income = 3.1250
 3. Узнать какая максимальная population в зоне минимального значения median_house_value
 
-
+s
 
 ### Домашняя работа
 
