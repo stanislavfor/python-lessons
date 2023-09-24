@@ -49,7 +49,7 @@ def update_contact():
     file.seek(0)
     for line in lines:      
       if surname.lower() in line.lower():
-        file.write(f"{new_surname}, {new_name}, {new_middle_name}, {new_phone}, {new_address} \n")
+        file.write(f"{new_surname} {new_name} {new_middle_name}, {new_phone}, {new_address} \n")
         print("Контакт изменен успешно")
       else:
         file.write(line)
