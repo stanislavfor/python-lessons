@@ -44,19 +44,19 @@ def update_contact():
         print(contact_str)       
   new_surname = input("Введите новую фамилию: ")    
   if len(new_surname) == 0:
-    new_surname = contact_str[0]    
+    new_surname = contact_str[0].replace(',', '')    
   new_name = input("Введите новое имя: ")
   if len(new_name) == 0:
-    new_name = contact_str[1]
+    new_name = contact_str[1].replace(',', '')
   new_middle_name = input("Введите новое отчество: ")
   if len(new_middle_name) == 0:
-    new_middle_name = contact_str[2][:-1]
+    new_middle_name = contact_str[2][:-1].replace(',', '')
   new_phone = input("Введите новый номер телефона: ")
   if len(new_phone) == 0:
-    new_phone = contact_str[3][:-1]
+    new_phone = contact_str[3][:-1].replace(',', '')
   new_address = input("Введите новый адрес: ")
   if len(new_address) == 0:
-    new_address = contact_str[-1]
+    new_address = contact_str[-1].replace(',', '')
   with open(path, "r+", encoding='utf-8') as file:
     lines = file.readlines()
     file.seek(0)
