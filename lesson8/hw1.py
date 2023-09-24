@@ -69,20 +69,20 @@ def delete_contact():
     file.truncate()
 
 
-def import_contacts():  
-  import_file_path = input("Введите путь к файлу (имя файла) для импорта: ")
-  with open(import_file_path, "r", encoding='utf-8') as import_file:
-    with open(path, "a", encoding='utf-8') as file:
-      for line in import_file:
-        file.write(line)
-
-
 def export_contacts():
   export_file_path = input("Введите путь к файлу (имя файла) для экспорта: ")
   with open(path, "r", encoding='utf-8') as file:
     with open(export_file_path, "w", encoding='utf-8') as export_file:
       for line in file:
         export_file.write(line)
+
+
+def import_contacts():  
+  import_file_path = input("Введите путь к файлу (имя файла) для импорта: ")
+  with open(import_file_path, "r", encoding='utf-8') as import_file:
+    with open(path, "a", encoding='utf-8') as file:
+      for line in import_file:
+        file.write(line)        
 
 
 def interface():
