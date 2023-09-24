@@ -31,7 +31,6 @@ def search_contacts():
         print(line.strip())
 
 
-
 def update_contact():
   surname = input("Введите фамилию записи, которую нужно изменить: ")    
   print("Вы собираетесь изменить контакт: ")
@@ -48,15 +47,23 @@ def update_contact():
   new_name = input("Введите новое имя: ")
   if len(new_name) == 0:
     new_name = contact_str[1].replace(',', '')
+  else: 
+    new_name = ''
   new_middle_name = input("Введите новое отчество: ")
   if len(new_middle_name) == 0:
     new_middle_name = contact_str[2][:-1].replace(',', '')
+  else:
+    new_middle_name = ''
   new_phone = input("Введите новый номер телефона: ")
   if len(new_phone) == 0:
     new_phone = contact_str[3][:-1].replace(',', '')
+  else:
+    new_phone = ''
   new_address = input("Введите новый адрес: ")
   if len(new_address) == 0:
     new_address = contact_str[-1].replace(',', '')
+  else:
+    new_address = ''
   with open(path, "r+", encoding='utf-8') as file:
     lines = file.readlines()
     file.seek(0)
@@ -83,20 +90,27 @@ def delete_contact():
     file.truncate()
 
 
+def import_contacts():  
+  import_file_path = input("Введите путь к файлу (имя файла) для импорта: ")
+  with open(import_file_path, "r", encoding='utf-8') as import_file:
+    with open(path, "a", encoding='utf-8') as file:      
+      for line in import_file:  
+        import_str = []
+        import_str = line.split()          
+        if len(import_str) < 5:
+          line = import_str  
+          file.write(f"{' '.join(line)}\n")       
+        elif len(import_str) >= 5:
+          line = import_str[0:5]
+          file.write(f"{' '.join(line)}\n") 
+
+
 def export_contacts():
   export_file_path = input("Введите путь к файлу (имя файла) для экспорта: ")
   with open(path, "r", encoding='utf-8') as file:
     with open(export_file_path, "w", encoding='utf-8') as export_file:
-      for line in file:
-        export_file.write(line)
-
-
-def import_contacts():  
-  import_file_path = input("Введите путь к файлу (имя файла) для импорта: ")
-  with open(import_file_path, "r", encoding='utf-8') as import_file:
-    with open(path, "a", encoding='utf-8') as file:
-      for line in import_file:
-        file.write(line)        
+      for line in file:        
+        export_file.write(line)            
 
 
 def interface():
@@ -106,9 +120,9 @@ def interface():
     print("1. Добавить запись")
     print("2. Поиск по фамилии или имени")
     print("3. Изменить запись")
-    print("4. Удалить запись")     
-    print("5. Экспортировать данные в файл")
-    print("6. Импортировать данные из файла")
+    print("4. Удалить запись")  
+    print("5. Импортировать данные из файла")
+    print("6. Экспортировать данные в файл")
     print("7. Вывести все записи")
     print("8. Выйти")
     choice = input("Выберите пункт меню: ") 
@@ -120,10 +134,10 @@ def interface():
       update_contact()
     elif choice == "4":
       delete_contact()  
-    elif choice == "5":      
-      export_contacts()    
+    elif choice == "5": 
+      import_contacts()   
     elif choice == "6":      
-      import_contacts()  
+      export_contacts() 
     elif choice == "7":
       print_contacts()  
     elif choice == "8":
