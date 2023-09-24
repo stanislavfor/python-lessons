@@ -23,6 +23,7 @@
 ```
 penguins = sns.load_dataset("penguins")
 penguins.head()
+
 ```
 
 #### Задача 3. 
@@ -31,13 +32,17 @@ penguins.head()
 ```
 high - длинный(от 42)
 middle - средний(от 35 до 42)
-low - маленький(до 35)```
+low - маленький(до 35)
+
+```
+
 
 #### Чтобы подключить датасет с пингвинами, воспользуйтесь данным скриптом:
 
 ```
 penguins = sns.load_dataset("penguins")
 penguins.head()
+
 ```
 
 #### Задача 4. 
@@ -49,7 +54,9 @@ penguins.head()
 
 
 ### Домашняя работа
-#### Задача 1. В ячейке ниже представлен код генерирующий DataFrame, которая состоит всего из 1 столбца. Ваша задача перевести его в one hot вид. Сможете ли вы это сделать без  get_dummies?
+#### Задача 1. В ячейке ниже представлен код генерирующий DataFrame, которая состоит всего из 1 столбца. 
+####Ваша задача перевести его в one hot вид. 
+####Сможете ли вы это сделать без  get_dummies?
 
 ```
 import random
@@ -60,7 +67,8 @@ data = pd.DataFrame({'whoAmI':lst})
 data.head()
 ```
 
-[<u>Статья про one hot вид</u>](https://colab.research.google.com/drive/1qKamnDiRmpRZkpiqWPkunBdAhmzhMcGz?usp=sharing)
+
+[Статья про one hot вид](https://colab.research.google.com/drive/1qKamnDiRmpRZkpiqWPkunBdAhmzhMcGz?usp=sharing)
 
 
 ##### Ссылки на Домашнюю работу:
